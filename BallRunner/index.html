@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Runner</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+        #gameInfo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+        }
+        #instructions {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            max-width: 250px;
+        }
+        #specialAttack {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .feature {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameInfo">
+        <div>Distance: <span id="distance">0</span>m</div>
+        <div>Level: <span id="level">1</span></div>
+        <div>Special Attack: <span id="specialAttack">Not Ready</span></div>
+    </div>
+    <div id="instructions">
+        <h3>Controls:</h3>
+        <p>Jump: ↑ or W</p>
+        <p>Double Jump: ↑ or W (in air)</p>
+        <p>Slide: ↓ or S</p>
+        <p>Special Attack: Space (when ready)</p>
+        <p>Wall Jump: ↑ or W (while wall sliding)</p>
+        
+        <div class="feature">
+            <h3>Features:</h3>
+            <p>• Orange Ramps: Boost your jump</p>
+            <p>• Blue Walls: Wall slide and jump</p>
+            <p>• Purple Blocks: Move up and down</p>
+            <p>• Red Blocks: Break with special attack</p>
+            <p>• Green Pads: Bounce higher</p>
+        </div>
+    </div>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <script src="game.js"></script>
+</body>
+</html> 

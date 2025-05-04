@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #fff;
+            background-color: #000;
+        }
+        #gameInfo {
+            color: white;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        #controls {
+            color: white;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        #progressContainer {
+            width: 800px;
+            height: 20px;
+            background-color: #333;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        #progressBar {
+            height: 100%;
+            width: 0%;
+            background-color: #4CAF50;
+            transition: width 0.3s ease;
+        }
+        #restartButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #restartButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="500"></canvas>
+    <div id="gameInfo">
+        Level: <span id="level">1</span> | Score: <span id="score">0</span>
+    </div>
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+    <div id="controls">
+        Controls: W/S or ↑/↓ to move paddle
+    </div>
+    <button id="restartButton">Restart Game</button>
+    <script src="game.js"></script>
+</body>
+</html> 
